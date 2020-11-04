@@ -22,7 +22,9 @@ pipeline{
         }
         stage('deploy') {
             when {
-                env.BRANCH == "master"
+                expression {
+                    env.BRANCH == "master"
+                }
             }
             steps {
                 script {
