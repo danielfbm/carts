@@ -23,7 +23,7 @@ pipeline{
         stage('deploy') {
             when {
                 expression {
-                    env.BRANCH == "master"
+                    env.GIT_BRANCH == "master"
                 }
             }
             steps {
